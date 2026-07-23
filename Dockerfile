@@ -5,7 +5,7 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY app.py boe_document.py ./
+COPY app.py boe_document.py markdown_parser.py ./
 COPY templates/ ./templates/
 
 # Hosting-platforms geven de poort mee via $PORT; val terug op 8080.
