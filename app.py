@@ -45,9 +45,11 @@ STIJLEN = {
 # ── Sjablonen ──────────────────────────────────────────────────────────────
 # Nieuwe klant toevoegen? Zet het .docx in templates/, voeg hier een regel
 # toe, en koppel de klantnaam in KLANT_SJABLOON hieronder.
+# Het DNP-sjabloon heeft geen eigen tabelstijl; het gebruikt BOEtabel.
 SJABLONEN = {
     "boe": {"bestand": "BOE_sjabloon.docx", "tabelstijl": "BOEtabel"},
     "nxt": {"bestand": "NXT_sjabloon.docx", "tabelstijl": "NXTtabel"},
+    "dnp": {"bestand": "DNP_sjabloon.docx", "tabelstijl": "BOEtabel"},
 }
 
 STANDAARD = "boe"
@@ -55,9 +57,11 @@ STANDAARD = "boe"
 # ── Klant -> sjabloon ──────────────────────────────────────────────────────
 # De sleutel wordt genormaliseerd vergeleken (kleine letters, geen leestekens)
 # en er wordt gekeken of hij VOORKOMT in de klantnaam. Zo matcht "nxtgen" ook
-# op "NXTGEN Hightech" en "NXTGEN Hightech Agrifood".
+# op "NXTGEN Hightech" en "NXTGEN Hightech Agrifood", en "nieuweploeg" op
+# "De Nieuwe Ploeg".
 KLANT_SJABLOON = {
     "nxtgen": "nxt",
+    "nieuweploeg": "dnp",
 }
 
 # Vaste instellingen die voor alle sjablonen gelden
